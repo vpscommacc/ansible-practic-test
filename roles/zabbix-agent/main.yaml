@@ -1,3 +1,5 @@
 ---
 - name: Install zabbix-agent
   ansible.builtin.shell: apt install zabbix-agent
+- name: Create Mysql configuration file
+  template: src=zabbix_agentd.conf dest=/etc/zabbix_agentd.conf
