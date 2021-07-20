@@ -1,2 +1,12 @@
 ---
 - host: all
+  tasks:
+    - name: Docker Install
+      shell:
+        - command1: curl https://get.docker.com > docker-install.sh
+          command2: chmod +x docker-install.sh
+          command3: bash docker-install.sh
+    - name: Docker-compose install
+      shell:
+        - command1: apt install docker-compose
+          command2: usermod -aG docker USER_LOGIN
