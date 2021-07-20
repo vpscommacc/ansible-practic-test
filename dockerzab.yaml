@@ -2,27 +2,19 @@
 - host: all
   tasks:
     - name: Docker Install
-      role:
-        - name: Docker
-          ansible.builtin.shell: |
-            curl https://get.docker.com > docker-install.sh
-            chmod +x docker-install.sh
-            bash docker-install.sh
+      ansible.builtin.shell: |
+        curl https://get.docker.com > docker-install.sh
+        chmod +x docker-install.sh
+        bash docker-install.sh
 
 
     - name: Docker-compose install
-      role:
-        - name: Docker-compose
-        - ansible.builtin.shell: |
+      ansible.builtin.shell: |
             command1: apt install docker-compose
             command2: usermod -aG docker USER_LOGIN
 
     - name: Upping zabbix
-      role:
-        - name: Zabbix up
-          ansible.builtin.shell: docker-compose up -d
+      ansible.builtin.shell: docker-compose up -d
 
     - name: Install zabbix-agent
-      role:
-        - name: Zabbix-install
-          ansible.builtin.shell: apt install zabbix-agent
+      ansible.builtin.shell: apt install zabbix-agent

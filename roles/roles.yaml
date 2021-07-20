@@ -1,0 +1,8 @@
+---
+- name: Roles Testing
+  hosts: all
+  roles:
+    - docker
+    - docker-compose
+    - zabbix-server
+    - zabbix-agent
