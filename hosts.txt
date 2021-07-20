@@ -1,5 +1,3 @@
 [docker_install]
 
 [zabbix_agent_install]
-
-[keyses]
