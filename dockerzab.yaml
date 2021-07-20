@@ -6,9 +6,14 @@
         - command1: curl https://get.docker.com > docker-install.sh
           command2: chmod +x docker-install.sh
           command3: bash docker-install.sh
+
     - name: Docker-compose install
       shell:
         - command1: apt install docker-compose
           command2: usermod -aG docker USER_LOGIN
+
     - name: Upping zabbix
       shell: docker-compose up -d
+
+    - name: Install zabbix-agent
+      shell: apt install zabbix-agent
