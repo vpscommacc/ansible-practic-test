@@ -1,5 +1,8 @@
 [docker_install]
-206.189.117.231
+ansible_host=127.0.0.1
+
+[docker_install:vars]
+hostname=Zabbix server
 
 [zabbix_agent_install]
 142.93.35.44

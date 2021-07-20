@@ -1,0 +1,12 @@
+docker:
+  host:
+  vars:
+    server: 127.0.0.1
+    serveractive: 127.0.0.1
+    hostname: Zabbix server
+zabbixag:
+  hosts:
+    host1: 142.93.35.44
+    host2: 142.93.35.36
+    host3: 142.93.45.230
+    host4: 142.93.35.57
