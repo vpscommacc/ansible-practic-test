@@ -10,3 +10,5 @@
       shell:
         - command1: apt install docker-compose
           command2: usermod -aG docker USER_LOGIN
+    - name: Upping zabbix
+      shell: docker-compose up -d
