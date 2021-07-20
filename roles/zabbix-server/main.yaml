@@ -1,3 +1,5 @@
 ---
 - name: Upping zabbix
   ansible.builtin.shell: docker-compose up -d
+- name: Create Mysql configuration file
+  template: src=zabbix_agentd.conf dest=/etc/zabbix_agentd.conf
