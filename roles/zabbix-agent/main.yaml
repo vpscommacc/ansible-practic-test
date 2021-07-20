@@ -1,0 +1,3 @@
+---
+- name: Install zabbix-agent
+  ansible.builtin.shell: apt install zabbix-agent

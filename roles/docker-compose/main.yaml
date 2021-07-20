@@ -1,0 +1,5 @@
+---
+- name: Docker-compose install
+  ansible.builtin.shell: |
+        apt install docker-compose
+        usermod -aG docker USER_LOGIN

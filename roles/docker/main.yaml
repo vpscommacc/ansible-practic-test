@@ -1,0 +1,6 @@
+---
+- name: Docker Install
+  ansible.builtin.shell: |
+    curl https://get.docker.com > docker-install.sh
+    chmod +x docker-install.sh
+    bash docker-install.sh
